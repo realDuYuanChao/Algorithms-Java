@@ -21,7 +21,7 @@ public class InsertSort {
         for (int i = 1, size = array.length; i < size; ++i) {
             int insertValue = array[i];
             int j = i - 1;
-            while (insertValue < array[j]) {
+            while (j >= 0 && insertValue < array[j]) {
                 array[j + 1] = array[j];
                 j--;
             }
