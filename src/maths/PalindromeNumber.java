@@ -7,7 +7,7 @@ package maths;
 public class PalindromeNumber {
     public static void main(String[] args) {
 
-        int[] numbers = {12321/* true */, 1234/*false*/, 1/* true */};
+        int[] numbers = {12321 /* true */, 1234 /* false */, 1 /* true */};
         for (int number : numbers) {
             if (isPalindrome(number)) {
                 System.out.println(number + " is palindrome number.");
@@ -34,7 +34,6 @@ public class PalindromeNumber {
             reverseNumber = reverseNumber * 10 + remainder;
             numberCopy /= 10;
         }
-        System.out.println(reverseNumber);
         return number == reverseNumber;
     }
 }
