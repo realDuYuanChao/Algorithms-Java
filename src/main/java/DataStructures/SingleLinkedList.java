@@ -71,7 +71,7 @@ public class SingleLinkedList {
      */
     public void insert(int position, int data) {
         if (position < 0 || position > size) {
-            throw new IndexOutOfBoundsException(position);
+            throw new IndexOutOfBoundsException("" + position);
         }
         Node cur = head;
         for (int i = 0; i < position; ++i) {
@@ -107,7 +107,7 @@ public class SingleLinkedList {
      */
     public void delete(int position) {
         if (position < 0 || position > size - 1) {
-            throw new IndexOutOfBoundsException(position);
+            throw new IndexOutOfBoundsException("" + position);
         }
         Node cur = head;
         for (int i = 0; i < position; ++i) {
