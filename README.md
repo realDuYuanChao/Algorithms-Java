@@ -24,6 +24,8 @@
 * [PalindromeStringRecursion](src/main/java/maths/PalindromeStringRecursion.java)
 * [PrimeCheck](src/main/java/maths/PrimeCheck.java)
 * [TowerOfHanoi](src/main/java/maths/TowerOfHanoi.java)
+* [AbsoluteMax](src/main/java/maths/AbsoluteMax.java)
+* [AbsoluteMin](src/main/java/maths/AbsoluteMin.java)
 
 ## Searching
 * [BinarySearch](src/main/java/searching/BinarySearch.java)
