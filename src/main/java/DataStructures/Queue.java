@@ -16,6 +16,9 @@ public class Queue {
     /* end of queue(not store element) */
     private int rear;
 
+    /* the size of queue */
+    private int size;
+
     /**
      * DEFAULT SIZE
      */
@@ -37,6 +40,7 @@ public class Queue {
         values = new int[size + 1];
         front = rear = 0;
         maxSize = size + 1;
+        this.size = 0;
     }
 
     /**
@@ -70,6 +74,7 @@ public class Queue {
 
         values[rear] = value;
         rear = ++rear % maxSize;
+        size++;
         return true;
     }
 
@@ -85,6 +90,7 @@ public class Queue {
         }
         int value = values[front];
         front = (++front) % maxSize;
+        size--;
         return value;
     }
 
@@ -112,6 +118,15 @@ public class Queue {
             throw new NoSuchElementException("queue is empty");
         }
         return values[(rear - 1 + maxSize) % maxSize];
+    }
+
+    /**
+     * get queue size
+     *
+     * @return size of queue
+     */
+    public int size() {
+        return size; /* or (rear - front + maxSize) % maxSize */
     }
 
     /* Driver */
