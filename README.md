@@ -5,6 +5,7 @@
 * [SingleLinkedList](src/main/java/DataStructures/SingleLinkedList.java)
 * [CircleSingleLinkedList](src/main/java/DataStructures/CircleSingleLinkedList.java)
 * [Queue](src/main/java/DataStructures/Queue.java)
+* [MergeSortedArrayList](src/main/java/DataStructures/MergeSortedArrayList.java)
 
 ## Maths
 * [AbsoluteValue](src/main/java/maths/AbsoluteValue.java)
