@@ -16,6 +16,23 @@ public class Queue {
     /* end of queue(not store element) */
     private int rear;
 
+    /**
+     * DEFAULT SIZE
+     */
+    private static int DEFAULT_CAPACITY = 10;
+
+    /**
+     * default constructor with {@link #DEFAULT_CAPACITY}
+     */
+    public Queue() {
+        this(DEFAULT_CAPACITY);
+    }
+
+    /**
+     * init queue with specified size
+     *
+     * @param size queue size
+     */
     public Queue(int size) {
         values = new int[size + 1];
         front = rear = 0;
