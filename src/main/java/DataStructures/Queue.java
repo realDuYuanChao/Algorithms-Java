@@ -134,7 +134,7 @@ public class Queue {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
         for (int i = front; i != rear; i = ++i % maxSize) {
-            sb.append(values[i] + ", ");
+            sb.append(values[i]).append(", ");
         }
         sb.replace(sb.length() - 2, sb.length(), "]");
         return sb.toString();
