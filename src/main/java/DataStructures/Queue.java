@@ -129,6 +129,17 @@ public class Queue {
         return size; /* or (rear - front + maxSize) % maxSize */
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = front; i != rear; i = ++i % maxSize) {
+            sb.append(values[i] + ", ");
+        }
+        sb.replace(sb.length() - 2, sb.length(), "]");
+        return sb.toString();
+    }
+
     /* Driver */
     public static void main(String[] args) {
         Queue queue = new Queue(5);
@@ -141,6 +152,8 @@ public class Queue {
         System.out.println(queue.isFull()); /* output: false */
         queue.enqueue(5); /* 1 2 3 4 5 */
         System.out.println(queue.isFull()); /* output: true */
+
+        System.out.println(queue); /* output: [1, 2, 3, 4, 5] */
 
         while (!queue.isEmpty()) {
             System.out.print(queue.dequeue() + " "); /* output: 1 2 3 4 5 */
