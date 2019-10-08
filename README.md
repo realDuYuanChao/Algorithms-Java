@@ -26,6 +26,8 @@
 * [TowerOfHanoi](src/main/java/maths/TowerOfHanoi.java)
 * [AbsoluteMax](src/main/java/maths/AbsoluteMax.java)
 * [AbsoluteMin](src/main/java/maths/AbsoluteMin.java)
+* [GCD](src/main/java/maths/GCD.java)
+* [GCDRecursion](src/main/java/maths/GCDRecursion.java)
 
 ## Searching
 * [BinarySearch](src/main/java/searching/BinarySearch.java)
