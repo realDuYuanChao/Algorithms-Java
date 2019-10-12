@@ -4,8 +4,8 @@ import java.util.Stack;
 
 public class BracketsMatch {
     public static void main(String[] args) {
-        assert isMatching("[()]{}{[()()]()}");
-        assert !isMatching("[(])");
+        assert isBalanced("[()]{}{[()()]()}");
+        assert !isBalanced("[(])");
     }
 
     /**
@@ -36,7 +36,7 @@ public class BracketsMatch {
      * @param brackets the brackets
      * @return {@code true} if {@code brackets} is balanced, otherwise {@code false}
      */
-    public static boolean isMatching(String brackets) {
+    public static boolean isBalanced(String brackets) {
         if (brackets == null) {
             throw new IllegalArgumentException("brackets is null");
         }
