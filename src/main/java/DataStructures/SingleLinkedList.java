@@ -120,13 +120,17 @@ public class SingleLinkedList {
         size--;
     }
 
-    public void display() {
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
         Node cur = head.next;
         while (cur != null) {
-            System.out.print(cur.data + "\t");
+            builder.append(cur.data).append("->");
             cur = cur.next;
         }
-        System.out.println();
+        return builder
+                .replace(builder.length() - 2, builder.length(), "")
+                .toString();
     }
 
     /* Driver */
@@ -136,13 +140,13 @@ public class SingleLinkedList {
         list.insert(1); /* 0 1 */
         list.insert(2); /* 0 1 2 */
         list.insertFront(-1); /* -1 0 1 2 */
-        list.display();
+        System.out.println(list);
 
         System.out.println("----------------");
 
         list.deleteFront(); /* 0 1 2 */
         list.delete(); /* 0 1 */
         list.delete(0); /* 1 */
-        list.display();
+        System.out.println(list);
     }
 }
