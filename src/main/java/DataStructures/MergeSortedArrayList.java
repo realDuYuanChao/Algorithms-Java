@@ -9,9 +9,9 @@ import java.util.List;
 
 public class MergeSortedArrayList {
     public static void main(String[] args) {
-        List<Integer> listA = new ArrayList<Integer>();
-        List<Integer> listB = new ArrayList<Integer>();
-        List<Integer> listC = new ArrayList<Integer>();
+        List<Integer> listA = new ArrayList<>();
+        List<Integer> listB = new ArrayList<>();
+        List<Integer> listC = new ArrayList<>();
 
         /* init ListA and List B */
         for (int i = 1; i <= 10; i += 2) {
