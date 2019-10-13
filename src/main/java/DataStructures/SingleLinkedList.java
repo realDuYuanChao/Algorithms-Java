@@ -70,9 +70,7 @@ public class SingleLinkedList {
      * @throws IndexOutOfBoundsException if {@code position} is invalid
      */
     public void insert(int position, int data) {
-        if (position < 0 || position > size) {
-            throw new IndexOutOfBoundsException("" + position);
-        }
+        checkBounds(position, 0, size);
         Node cur = head;
         for (int i = 0; i < position; ++i) {
             cur = cur.next;
@@ -106,9 +104,7 @@ public class SingleLinkedList {
      * @throws IndexOutOfBoundsException if {@code position} is invalid
      */
     public void delete(int position) {
-        if (position < 0 || position > size - 1) {
-            throw new IndexOutOfBoundsException("" + position);
-        }
+        checkBounds(position, 0, size - 1);
         Node cur = head;
         for (int i = 0; i < position; ++i) {
             cur = cur.next;
@@ -131,6 +127,12 @@ public class SingleLinkedList {
         return builder
                 .replace(builder.length() - 2, builder.length(), "")
                 .toString();
+    }
+
+    public void checkBounds(int position, int low, int high) {
+        if (position < low || position > high) {
+            throw new IndexOutOfBoundsException(position + "");
+        }
     }
 
     /* Driver */
