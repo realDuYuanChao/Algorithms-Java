@@ -1,6 +1,7 @@
 # All Algorithms implemented in Java
 [![CI](https://travis-ci.org/shellhub/Algorithms-Java.svg?branch=master)](https://travis-ci.org/shellhub/Algorithms-Java)
 ![](https://img.shields.io/badge/language-java-b07219.svg)
+![](https://img.shields.io/shellhub/l/Algorithms-Java.svg?style=flat)
 
 ### Data Structures
 * [Stack](src/main/java/DataStructures/Stack.java)
