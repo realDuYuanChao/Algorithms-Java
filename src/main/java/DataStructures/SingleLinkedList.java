@@ -116,6 +116,21 @@ public class SingleLinkedList {
         size--;
     }
 
+    /**
+     * clear all node in list
+     */
+    public void clear() {
+        Node prev = head.next;
+        Node cur = head.next.next;
+        while (cur != null) {
+            prev = null; /* clear to let gc do work */
+            prev = cur;
+            cur = cur.next;
+        }
+        head.next = null;
+        size = 0;
+    }
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
@@ -149,6 +164,10 @@ public class SingleLinkedList {
         list.deleteFront(); /* 0 1 2 */
         list.delete(); /* 0 1 */
         list.delete(0); /* 1 */
+        System.out.println(list);
+
+        list.clear();
+        assert list.isEmpty();
         System.out.println(list);
     }
 }
