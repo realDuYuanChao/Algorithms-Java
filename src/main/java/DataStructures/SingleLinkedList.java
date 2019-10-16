@@ -7,8 +7,11 @@ public class SingleLinkedList {
         private Node next; /* the pointer of next elem */
 
         private Node() {
-            this.data = 0;
-            next = null;
+
+        }
+
+        private Node(int data) {
+            this(data, null);
         }
 
         private Node(int data, Node node) {
@@ -23,6 +26,7 @@ public class SingleLinkedList {
 
     public SingleLinkedList() {
         head = new Node();
+        head.next = null;
         size = 0;
     }
 
@@ -76,7 +80,7 @@ public class SingleLinkedList {
             cur = cur.next;
         }
 
-        Node newNode = new Node(data, null);
+        Node newNode = new Node(data);
         newNode.next = cur.next;
         cur.next = newNode;
 
@@ -133,15 +137,16 @@ public class SingleLinkedList {
 
     @Override
     public String toString() {
+        if (size == 0) {
+            return "";
+        }
         StringBuilder builder = new StringBuilder();
         Node cur = head.next;
         while (cur != null) {
             builder.append(cur.data).append("->");
             cur = cur.next;
         }
-        return builder
-                .replace(builder.length() - 2, builder.length(), "")
-                .toString();
+        return builder.replace(builder.length() - 2, builder.length(), "").toString();
     }
 
     public void checkBounds(int position, int low, int high) {
