@@ -46,7 +46,7 @@ public class Queue {
     /**
      * Check whether queue is full or not
      *
-     * @return {@code true} if queue is full, otherwise {@code false}
+     * @return <tt>true</tt> if queue is full, otherwise <tt>true</tt>
      */
     public boolean isFull() {
         return (rear + 1) % maxSize == front;
@@ -55,7 +55,7 @@ public class Queue {
     /**
      * Check whether queue is empty or not
      *
-     * @return {@code true} if queue is empty, otherwise {@code false}
+     * @return <tt>true</tt> if queue is empty, otherwise <tt>false</tt>>
      */
     public boolean isEmpty() {
         return front == rear;
@@ -65,7 +65,7 @@ public class Queue {
      * insert value to end of queue
      *
      * @param value to insert
-     * @return {@code true} if {@link #isFull()} is {@code false}, otherwise false
+     * @return <tt>true</tt> if {@link #isFull()} is <tt>false</tt>, otherwise <tt>false</tt>
      */
     public boolean enqueue(int value) {
         if (isFull()) {

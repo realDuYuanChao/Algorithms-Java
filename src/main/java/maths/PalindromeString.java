@@ -20,7 +20,7 @@ public class PalindromeString {
      * Checkout whether {@code palindrome} is palindrome string or not.
      *
      * @param palindrome to checkout
-     * @return {@code true} if {@code palindrome} is palindrome string, otherwise {@code false}.
+     * @return <tt>true</tt> if {@code palindrome} is palindrome string, otherwise <tt>false</tt>.
      */
     public static boolean isPalindrome(String palindrome) {
         int length = palindrome.length();

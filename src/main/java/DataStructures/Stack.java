@@ -36,7 +36,7 @@ public class Stack {
     /**
      * check whether stack is empty
      *
-     * @return {@code true} if {@code size} equals zero
+     * @return <tt>true</tt>> if {@code size} equals zero
      */
     public boolean isEmpty() {
         return size == 0;
@@ -46,7 +46,7 @@ public class Stack {
      * add element to top of stack
      *
      * @param value to add
-     * @return {@code true} if add success, otherwise {@code false}
+     * @return <tt>true</tt> if add success, otherwise {@code false}
      */
     public boolean push(int value) {
         values[++top] = value;

@@ -13,8 +13,8 @@ public class BracketsMatch {
      *
      * @param leftBracket   left bracket
      * @param rightBrackets right bracket
-     * @return {@code true} if {@code leftBracket} and {@code rightBrackets} is paired,
-     * otherwise {@code false}
+     * @return <tt>true</tt> if {@code leftBracket} and {@code rightBrackets} is paired,
+     * otherwise <tt>false</tt>
      */
     public static boolean isPaired(char leftBracket, char rightBrackets) {
         char[][] pairedBrackets = {
@@ -34,7 +34,7 @@ public class BracketsMatch {
      * Check if {@code brackets} is balanced
      *
      * @param brackets the brackets
-     * @return {@code true} if {@code brackets} is balanced, otherwise {@code false}
+     * @return <tt>true</tt> if {@code brackets} is balanced, otherwise <tt>false</tt>
      */
     public static boolean isBalanced(String brackets) {
         if (brackets == null) {

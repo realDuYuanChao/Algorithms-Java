@@ -18,7 +18,7 @@ public class PrimeCheck {
     /***
      * Check a number is prime or not
      * @param n the number
-     * @return {@code true} if {@code n} is prime
+     * @return <tt>true</tt> if {@code n} is prime, otherwise <tt>false</tt>
      */
     public static boolean isPrime(int n) {
         if (n == 2) {
