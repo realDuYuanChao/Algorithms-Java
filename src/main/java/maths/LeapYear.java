@@ -18,6 +18,12 @@ public class LeapYear {
         }
     }
 
+    /**
+     * Check if year is leap year or not
+     *
+     * @param year the year to check
+     * @return <tt>true</tt> if {@code year} is leap year
+     */
     public static boolean isLeapYear(int year) {
         return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0 && year % 3200 != 0);
     }

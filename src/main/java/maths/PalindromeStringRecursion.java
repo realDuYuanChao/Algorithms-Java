@@ -22,7 +22,7 @@ public class PalindromeStringRecursion {
      * @param palindrome to checkout
      * @param left       the index of first element
      * @param right      the index of last element
-     * @return {@code true} if {@code palindrome} is palindrome string, otherwise {@code false}.
+     * @return <tt>true</tt> if {@code palindrome} is palindrome string, otherwise <tt>false</tt>.
      */
     public static boolean isPalindrome(String palindrome, int left, int right) {
         if (left >= right) {

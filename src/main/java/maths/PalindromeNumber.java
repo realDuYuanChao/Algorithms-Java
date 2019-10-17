@@ -21,7 +21,7 @@ public class PalindromeNumber {
      * Check out whether {@code n} is palindrome number or not
      *
      * @param number the number
-     * @return {@code true} if {@code n} is palindrome number, otherwise {@code false}
+     * @return <tt>true</tt> if {@code n} is palindrome number, otherwise <tt>false</tt>
      */
     public static boolean isPalindrome(int number) {
         if (number < 0) {
