@@ -3,6 +3,10 @@
 ![](https://img.shields.io/badge/language-java-b07219.svg)
 ![](https://img.shields.io/shellhub/l/Algorithms-Java.svg?style=flat)
 
+You can play around (run and edit) the Algorithms or contribute to them using Gitpod.io a free online dev environment with a single click. No need to worry about the Dev enviroment.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/shellhub/Algorithms-Java)
+
 ### Data Structures
 * [Stack](src/main/java/DataStructures/Stack.java)
 * [SingleLinkedList](src/main/java/DataStructures/SingleLinkedList.java)
