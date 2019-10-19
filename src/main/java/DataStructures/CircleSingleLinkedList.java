@@ -13,6 +13,7 @@ public class CircleSingleLinkedList {
 
     public CircleSingleLinkedList() {
         head = new Node();
+        head.next = head;
         size = 0;
     }
 
@@ -50,14 +51,8 @@ public class CircleSingleLinkedList {
         }
 
         Node newNode = new Node(data);
-        if (index == size) {
-            cur.next = newNode;
-            newNode.next = head.next;
-            tail = newNode;
-        } else {
-            newNode.next = cur.next;
-            cur.next = newNode;
-        }
+        newNode.next = cur.next;
+        cur.next = newNode;
         size++;
 
     }
@@ -94,13 +89,7 @@ public class CircleSingleLinkedList {
 
         Node destroy = cur.next;
         cur.next = cur.next.next;
-        destroy = null; /* clear to let gc do work */
-
-        if (index == 0) {
-            tail.next = head.next;
-        } else if (index == size - 1) {
-            tail = cur;
-        }
+        destroy = null; /* clear to let GC do it's work */
         size--;
     }
 
@@ -133,19 +122,6 @@ public class CircleSingleLinkedList {
         return builder
                 .replace(builder.length() - 2, builder.length(), "")
                 .toString();
-    }
-
-    public void circleTravel() {
-
-        int count = 0;
-        Node cur = head.next;
-        while (cur != null) {
-            System.out.print(cur.data + "->");
-            cur = cur.next;
-            if (++count == 10) {
-                break;
-            }
-        }
     }
 
     private static class Node {
