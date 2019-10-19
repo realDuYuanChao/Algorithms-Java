@@ -2,7 +2,7 @@ package DataStructures;
 
 import java.util.Stack;
 
-public class AnyToAnyUsingStack {
+public class DecimalToAnyUsingStack {
     public static void main(String[] args) {
         assert convert(0, 2).equals("0");
         assert convert(30, 2).equals("11110");
@@ -12,17 +12,17 @@ public class AnyToAnyUsingStack {
     }
 
     /**
-     * Convert decimal number to another radius
+     * Convert decimal number to another radix
      *
      * @param number the number to be converted
-     * @param radius the radius
-     * @return another radius
+     * @param radix the radix
+     * @return another radix
      * @throws ArithmeticException if <tt>number</tt> or <tt>radius</tt> is invalid
      */
-    private static String convert(int number, int radius) {
-        if (radius < 2 || radius > 16) {
+    private static String convert(int number, int radix) {
+        if (radix < 2 || radix > 16) {
             throw new ArithmeticException(
-                    String.format("Invalid input -> number:%d,radius:%d", number, radius));
+                    String.format("Invalid input -> number:%d,radius:%d", number, radix));
         }
         char[] tables = {
                 '0', '1', '2', '3', '4',
@@ -31,8 +31,8 @@ public class AnyToAnyUsingStack {
         };
         Stack<Character> bits = new Stack<>();
         do {
-            bits.push(tables[number % radius]);
-            number = number / radius;
+            bits.push(tables[number % radix]);
+            number = number / radix;
         } while (number != 0);
 
         StringBuilder result = new StringBuilder();
