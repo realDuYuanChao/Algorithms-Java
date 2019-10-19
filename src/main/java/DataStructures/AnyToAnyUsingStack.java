@@ -20,7 +20,7 @@ public class AnyToAnyUsingStack {
      * @throws ArithmeticException if <tt>number</tt> or <tt>radius</tt> is invalid
      */
     private static String convert(int number, int radius) {
-        if (number < 0 || radius < 2 || radius > 16) {
+        if (radius < 2 || radius > 16) {
             throw new ArithmeticException(
                     String.format("Invalid input -> number:%d,radius:%d", number, radius));
         }
