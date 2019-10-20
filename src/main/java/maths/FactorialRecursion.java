@@ -5,7 +5,10 @@ package maths;
  */
 public class FactorialRecursion {
     public static void main(String[] args) {
-        System.out.println("5! = " + factorial(5)); /* output: 120 */
+        assert factorial(0) == 1;
+        assert factorial(1) == 1;
+        assert factorial(3) == 6;
+        assert factorial(5) == 120;
     }
 
     /**

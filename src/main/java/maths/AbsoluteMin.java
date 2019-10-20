@@ -10,8 +10,8 @@ import java.util.Arrays;
  */
 public class AbsoluteMin {
     public static void main(String[] args) {
-        int[] numbers = new int[]{3, -10, -2};
-        System.out.println("absMin(" + Arrays.toString(numbers) + ") = " + absMin(numbers));
+        assert absMin(new int[]{0, 5, 1, 11}) == 0;
+        assert absMin(new int[]{3, -10, -2}) == -2;
     }
 
     /**

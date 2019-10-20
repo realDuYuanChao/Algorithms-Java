@@ -46,12 +46,12 @@ public class MergeSortedArrayList {
             }
         }
 
-        /* copy left element of listA to listC */
+        /* copy left elements of listA to listC */
         while (pa < listA.size()) {
             listC.add(listA.get(pa++));
         }
 
-        /* copy left element of listB to listC */
+        /* copy left elements of listB to listC */
         while (pb < listB.size()) {
             listC.add(listB.get(pb++));
         }
