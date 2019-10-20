@@ -9,21 +9,21 @@ public class BracketsMatch {
     }
 
     /**
-     * Check if {@code leftBracket} and {@code rightBrackets} is paired or not
+     * Check if {@code leftBracket} and {@code rightBracket} is paired or not
      *
      * @param leftBracket   left bracket
-     * @param rightBrackets right bracket
-     * @return <tt>true</tt> if {@code leftBracket} and {@code rightBrackets} is paired,
+     * @param rightBracket right bracket
+     * @return <tt>true</tt> if {@code leftBracket} and {@code rightBracket} is paired,
      * otherwise <tt>false</tt>
      */
-    public static boolean isPaired(char leftBracket, char rightBrackets) {
+    public static boolean isPaired(char leftBracket, char rightBracket) {
         char[][] pairedBrackets = {
                 {'(', ')'},
                 {'[', ']'},
                 {'{', '}'}
         };
         for (char[] pairedBracket : pairedBrackets) {
-            if (pairedBracket[0] == leftBracket && pairedBracket[1] == rightBrackets) {
+            if (pairedBracket[0] == leftBracket && pairedBracket[1] == rightBracket) {
                 return true;
             }
         }
@@ -31,7 +31,7 @@ public class BracketsMatch {
     }
 
     /**
-     * Check if {@code brackets} is balanced
+     * Check if specified {@code brackets} is balanced
      *
      * @param brackets the brackets
      * @return <tt>true</tt> if {@code brackets} is balanced, otherwise <tt>false</tt>

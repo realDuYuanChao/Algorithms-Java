@@ -10,8 +10,8 @@ import java.util.Arrays;
  */
 public class AbsoluteMax {
     public static void main(String[] args) {
-        int[] numbers = new int[]{3, -10, -2};
-        System.out.println("absMax(" + Arrays.toString(numbers) + ") = " + absMax(numbers));
+        assert absMax(new int[]{0, 5, 1, 11}) == 11;
+        assert absMax(new int[]{3, -10, -2}) == -10;
     }
 
     /**

@@ -9,12 +9,12 @@ public class MaxOfArrayRecursion {
 
         int left = 0;
         int right = array.length - 1;
-        System.out.println("max = " + max(array, left, right)); /* output: 10*/
+        assert max(array, left, right) == 10;
 
     }
 
     /**
-     * find max value in array
+     * Find max value in array
      *
      * @param array contains elements
      * @param left  index of first elements

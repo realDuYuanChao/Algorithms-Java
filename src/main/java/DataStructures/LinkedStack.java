@@ -36,7 +36,7 @@ public class LinkedStack {
      *
      * @return size of stack
      */
-    public int getSize() {
+    public int size() {
         return size;
     }
 
@@ -100,11 +100,11 @@ public class LinkedStack {
         int data;
         Node next;
 
-        public Node(int data) {
+        Node(int data) {
             this(data, null);
         }
 
-        public Node(int data, Node next) {
+        Node(int data, Node next) {
             this.data = data;
             this.next = next;
         }

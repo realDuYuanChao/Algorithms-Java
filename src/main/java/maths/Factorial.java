@@ -5,14 +5,17 @@ package maths;
  */
 public class Factorial {
     public static void main(String[] args) {
-        System.out.println("5! = " + factorial(5)); /* output: 120 */
+        assert factorial(0) == 1;
+        assert factorial(1) == 1;
+        assert factorial(3) == 6;
+        assert factorial(5) == 120;
     }
 
     /**
      * calculate factorial
      *
      * @param n the number
-     * @return the factorial of {@code n}
+     * @return the factorial of <tt>n</tt>
      */
     public static long factorial(int n) {
         if (n < 0) {

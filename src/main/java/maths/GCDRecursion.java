@@ -5,13 +5,13 @@ package maths;
  */
 public class GCDRecursion {
     public static void main(String[] args) {
-        System.out.println(gcd(20, 15)); /* output: 5 */
-        System.out.println(gcd(10, 8));  /* output: 2 */
-        System.out.println(gcd(gcd(10, 5), gcd(5, 10))); /* output: 5 */
+        assert gcd(20, 10) == 5;
+        assert gcd(10, 2) == 2;
+        assert gcd(10, 5) == gcd(5, 10);
     }
 
     /**
-     * get greatest common divisor
+     * Get greatest common divisor
      *
      * @param a the first number
      * @param b the second number

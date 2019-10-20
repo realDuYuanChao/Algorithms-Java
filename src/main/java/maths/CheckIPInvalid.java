@@ -9,7 +9,7 @@ public class CheckIPInvalid {
     }
 
     /**
-     * Check if ip is valid
+     * Check if specified ip is valid
      *
      * @param ip to be checked
      * @return <tt>true</tt> if <tt>ip</tt> is valid, otherwise <tt>false</tt>
@@ -21,7 +21,7 @@ public class CheckIPInvalid {
         }
         for (String bit : bits) {
             try {
-                if (Integer.valueOf(bit) < 0 || Integer.valueOf(bit) > 255) {
+                if (Integer.parseInt(bit) < 0 || Integer.parseInt(bit) > 255) {
                     return false;
                 }
             } catch (NumberFormatException e) {
