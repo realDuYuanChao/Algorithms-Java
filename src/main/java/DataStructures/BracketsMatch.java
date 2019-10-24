@@ -40,7 +40,7 @@ public class BracketsMatch {
         if (brackets == null) {
             throw new IllegalArgumentException("brackets is null");
         }
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
         for (Character bracket : brackets.toCharArray()) {
             switch (bracket) {
                 case '(':
