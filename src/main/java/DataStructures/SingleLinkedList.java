@@ -92,6 +92,11 @@ public class SingleLinkedList {
         size++;
     }
 
+    /**
+     * Insert element to list, always sorted
+     *
+     * @param data to be inserted
+     */
     public void insertSorted(int data) {
         Node cur = head;
         while (cur.next != null && data > cur.next.data) {
