@@ -30,12 +30,17 @@ public class SingleLinkedList {
         size = 0;
     }
 
+    public SingleLinkedList(Node head, int size) {
+        this.head = head;
+        this.size = size;
+    }
+
     /**
      * get list size
      *
      * @return {@code size} of list
      */
-    public int getSize() {
+    public int size() {
         return size;
     }
 
@@ -88,6 +93,23 @@ public class SingleLinkedList {
     }
 
     /**
+     * Insert element to list, always sorted
+     *
+     * @param data to be inserted
+     */
+    public void insertSorted(int data) {
+        Node cur = head;
+        while (cur.next != null && data > cur.next.data) {
+            cur = cur.next;
+        }
+
+        Node newNode = new Node(data);
+        newNode.next = cur.next;
+        cur.next = newNode;
+        size++;
+    }
+
+    /**
      * delete last node
      */
     public void delete() {
@@ -118,6 +140,40 @@ public class SingleLinkedList {
         destroy = null; /* let gc clear */
 
         size--;
+    }
+
+    /**
+     * Merge two sorted SingleLinkedList
+     *
+     * @param listA the first sorted list
+     * @param listB the second sored list
+     * @return merged sorted list
+     */
+    public static SingleLinkedList merge(SingleLinkedList listA, SingleLinkedList listB) {
+        Node headA = listA.head.next;
+        Node headB = listB.head.next;
+
+        int size = listA.size() + listB.size();
+
+        Node head = new Node();
+        Node tail = head;
+        while (headA != null && headB != null) {
+            if (headA.data <= headB.data) {
+                tail.next = headA;
+                headA = headA.next;
+            } else {
+                tail.next = headB;
+                headB = headB.next;
+            }
+            tail = tail.next;
+        }
+        if (headA == null) {
+            tail.next = headB;
+        }
+        if (headB == null) {
+            tail.next = headA;
+        }
+        return new SingleLinkedList(head, size);
     }
 
     /**
@@ -174,5 +230,18 @@ public class SingleLinkedList {
         list.clear();
         assert list.isEmpty();
         System.out.println(list);
+
+        /* Test MergeTwoSortedLinkedList */
+        SingleLinkedList listA = new SingleLinkedList();
+        SingleLinkedList listB = new SingleLinkedList();
+
+        for (int i = 10; i >= 2; i -= 2) {
+            listA.insertSorted(i);
+            listB.insertSorted(i - 1);
+        }
+
+        System.out.println(listA); /* 2->4->6->8->10 */
+        System.out.println(listB); /* 1->3->5->7->9 */
+        System.out.println(SingleLinkedList.merge(listA, listB));
     }
 }
