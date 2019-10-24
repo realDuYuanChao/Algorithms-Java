@@ -150,7 +150,7 @@ public class SingleLinkedList {
     }
 
     public void checkBounds(int position, int low, int high) {
-        if (position < low || position > high) {
+        if (position > high || position < low) {
             throw new IndexOutOfBoundsException(position + "");
         }
     }

@@ -78,7 +78,7 @@ public class CircleSingleLinkedList {
      * @throws IndexOutOfBoundsException if {@code index} is invalid
      */
     public void delete(int index) {
-        if (index < 0 || index > size - 1) {
+        if (index > size - 1 || index < 0) {
             throw new IndexOutOfBoundsException("" + index);
         }
 
