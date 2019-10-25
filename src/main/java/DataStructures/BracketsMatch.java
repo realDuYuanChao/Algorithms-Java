@@ -51,7 +51,7 @@ public class BracketsMatch {
                 case ')':
                 case ']':
                 case '}':
-                    if (!(!stack.isEmpty() && isPaired(stack.pop(), bracket))) {
+                    if (stack.isEmpty() || !isPaired(stack.pop(), bracket)) {
                         return false;
                     }
                     break;
