@@ -3,7 +3,7 @@ package maths;
 /**
  * Fibonacci: 0 1 1 2 3 5 8 13 21 ...
  */
-public class FinbonacciNumber {
+public class FibonacciNumber {
     public static void main(String[] args) {
         assert isFibonacciNumber(1);
         assert isFibonacciNumber(2);
