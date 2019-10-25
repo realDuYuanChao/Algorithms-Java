@@ -41,7 +41,7 @@ public class BracketsMatch {
             throw new IllegalArgumentException("brackets is null");
         }
         Stack<Character> stack = new Stack<>();
-        for (Character bracket : brackets.toCharArray()) {
+        for (char bracket : brackets.toCharArray()) {
             switch (bracket) {
                 case '(':
                 case '[':
