@@ -1,53 +1,10 @@
 # All Algorithms implemented in Java
-[![CI](https://travis-ci.org/shellhub/Algorithms-Java.svg?branch=master)](https://travis-ci.org/shellhub/Algorithms-Java)
+[![Build Status](https://img.shields.io/travis/shellhub/Algorithms-Java.svg?label=Travis%20CI&logo=travis)](https://travis-ci.com/shellhub/Algorithms-Java)&nbsp;
 ![](https://img.shields.io/badge/language-java-b07219.svg)
-![](https://img.shields.io/shellhub/l/Algorithms-Java.svg?style=flat)
+[![LGTM](https://img.shields.io/lgtm/alerts/github/shellhub/Algorithms-Java.svg?label=LGTM&logo=LGTM)](https://lgtm.com/projects/g/shellhub/Algorithms-Java/alerts)&nbsp;
+[![Contributions](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3)](https://github.com/Algorithms-Java/blob/master/CONTRIBUTING.md)&nbsp;
+![](https://img.shields.io/github/repo-size/shellhub/Algorithms-Java.svg?label=Repo%20size)&nbsp;
 
-You can play around (run and edit) the Algorithms or contribute to them using Gitpod.io a free online dev environment with a single click. No need to worry about the Dev enviroment.
+You can play around (run and edit) the Algorithms or contribute to them using Gitpod.io a free online dev environment with a single click. No need to worry about the Dev enviroment.&nbsp;
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/shellhub/Algorithms-Java)
-
-### Data Structures
-* [Stack](src/main/java/DataStructures/Stack.java)
-* [SingleLinkedList](src/main/java/DataStructures/SingleLinkedList.java)
-* [CircleSingleLinkedList](src/main/java/DataStructures/CircleSingleLinkedList.java)
-* [Queue](src/main/java/DataStructures/Queue.java)
-* [MergeSortedArrayList](src/main/java/DataStructures/MergeSortedArrayList.java)
-
-## Maths
-* [AbsoluteValue](src/main/java/maths/AbsoluteValue.java)
-* [Factorial](src/main/java/maths/Factorial.java)
-* [FactorialRecursion](src/main/java/maths/FactorialRecursion.java)
-* [Fibonacci](src/main/java/maths/Fibonacci.java)
-* [FibonacciRecursion](src/main/java/maths/FibonacciRecursion.java)
-* [LeapYear](src/main/java/maths/LeapYear.java)
-* [MaxOfArray](src/main/java/maths/MaxOfArray.java)
-* [MaxOfArrayRecursion](src/main/java/maths/MaxOfArrayRecursion.java)
-* [MinOfArray](src/main/java/maths/MinOfArray.java)
-* [MinOfArrayRecursion](src/main/java/maths/MinOfArrayRecursion.java)
-* [MultiplicationTable](src/main/java/maths/MultiplicationTable.java)
-* [PalindromeNumber](src/main/java/maths/PalindromeNumber.java)
-* [PalindromeString](src/main/java/maths/PalindromeString.java)
-* [PalindromeStringRecursion](src/main/java/maths/PalindromeStringRecursion.java)
-* [PrimeCheck](src/main/java/maths/PrimeCheck.java)
-* [TowerOfHanoi](src/main/java/maths/TowerOfHanoi.java)
-* [AbsoluteMax](src/main/java/maths/AbsoluteMax.java)
-* [AbsoluteMin](src/main/java/maths/AbsoluteMin.java)
-* [GCD](src/main/java/maths/GCD.java)
-* [GCDRecursion](src/main/java/maths/GCDRecursion.java)
-* [BracketsMatch](src/main/java/DataStructures/BracketsMatch.java)
-
-## Searching
-* [BinarySearch](src/main/java/searching/BinarySearch.java)
-* [BinarySearchRecursion](src/main/java/searching/BinarySearchRecursion.java)
-* [LinearSearch](src/main/java/searching/LinearSearch.java)
-* [LinearSearchRecursion](src/main/java/searching/LinearSearchRecursion.java)
-
-## Sorting
-* [BubbleSort](src/main/java/sorting/BubbleSort.java)
-* [InsertSort](src/main/java/sorting/InsertSort.java)
-* [QuickSort](src/main/java/sorting/QuickSort.java)
-* [SelectionSort](src/main/java/sorting/SelectionSort.java)
-
-## Contribution
-Pull requests is welcome 😊
