@@ -9,6 +9,9 @@ You can play around (run and edit) the Algorithms or contribute to them using Gi
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/shellhub/Algorithms-Java)
 
+## Contribution
+Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
+
 ## Donations
 
 You can support me by scanning following QR code. Thanks in advance.
