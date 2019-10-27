@@ -8,3 +8,8 @@
 You can play around (run and edit) the Algorithms or contribute to them using Gitpod.io a free online dev environment with a single click. No need to worry about the Dev enviroment.&nbsp;
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/shellhub/Algorithms-Java)
+
+## Donations
+
+You can support me by scanning following QR code. Thanks in advance.
+<div align=center><img src="donate.png" width = "300" div align=center />
