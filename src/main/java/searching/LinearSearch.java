@@ -6,19 +6,16 @@ package searching;
 public class LinearSearch {
     public static void main(String[] args) {
 
-        int[] array = {1, 3, 5, 7, 9, 2, 4, 6, 8, 10};
-        int key = 7;
-
-        int position = search(array, key);
-        if (position != -1) {
-            System.out.println(key + " locate at " + search(array, key));
-        } else {
-            System.out.println(key + " not found");
+        int[] array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        for (int i = 0; i < array.length; ++i) {
+            assert search(array, i) == i;
         }
+        assert search(array, -1) == -1;
+        assert search(array, 11) == -1;
     }
 
     /**
-     * search index of key value
+     * Search index of key value
      *
      * @param array contains elements
      * @param key   to be searched

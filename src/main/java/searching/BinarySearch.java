@@ -7,15 +7,11 @@ package searching;
 public class BinarySearch {
     public static void main(String[] args) {
         int[] array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int key = 7;
-
-
-        int position = binarySearch(array, key);
-        if (position != -1) {
-            System.out.println(key + " locate at " + position);
-        } else {
-            System.out.println(key + " not found");
+        for (int i = 0; i < array.length; ++i) {
+            assert binarySearch(array, i) == i;
         }
+        assert binarySearch(array, -1) == -1;
+        assert binarySearch(array, 11) == -1;
     }
 
     /**
