@@ -55,8 +55,6 @@ public class BracketsMatch {
                         return false;
                     }
                     break;
-                default: /* other character is invalid */
-                    return false;
             }
         }
         return stack.isEmpty();
