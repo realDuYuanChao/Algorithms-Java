@@ -177,6 +177,30 @@ public class SingleLinkedList {
     }
 
     /**
+     * Reverse SingleLinkedList
+     *
+     * @param list the list to reverse
+     * @return the list after reversed
+     */
+    public static SingleLinkedList reverse(SingleLinkedList list) {
+        Node head = list.head;
+        int size = list.size;
+
+        Node prev = null;
+        Node current = head.next;
+        Node next;
+
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        head.next = prev;
+        return new SingleLinkedList(head, size);
+    }
+
+    /**
      * clear all node in list
      */
     public void clear() {
@@ -243,5 +267,18 @@ public class SingleLinkedList {
         System.out.println(listA); /* 2->4->6->8->10 */
         System.out.println(listB); /* 1->3->5->7->9 */
         System.out.println(SingleLinkedList.merge(listA, listB));
+
+        /* Test reverse LinkedList */
+        SingleLinkedList singleLinkedList = new SingleLinkedList();
+        assert "".equals(SingleLinkedList.reverse(singleLinkedList).toString());
+
+        singleLinkedList.insert(1);
+        assert "1".equals(SingleLinkedList.reverse(singleLinkedList).toString());
+
+        singleLinkedList.clear();
+        for (int i = 1; i <= 5; ++i) {
+            singleLinkedList.insert(i);
+        }
+        assert "5->4->3->2->1".equals(SingleLinkedList.reverse(singleLinkedList).toString());
     }
 }
