@@ -10,6 +10,7 @@ public class MaxOfArrayRecursion {
         int left = 0;
         int right = array.length - 1;
         assert max(array, left, right) == 10;
+        assert max(array, array.length) == 10;
 
     }
 
@@ -36,5 +37,21 @@ public class MaxOfArrayRecursion {
         int rightMax = max(array, mid + 1, right);
 
         return Math.max(leftMax, rightMax);
+    }
+
+    /**
+     * Find max value in array
+     *
+     * @param array contains elements
+     * @param len   the length of array
+     * @return max value in {@code array}
+     */
+    public static int max(int[] array, int len) {
+        if (len == 1) {
+            return array[0];
+        } else {
+            int temp = max(array, len - 1);
+            return Math.max(array[len - 1], temp);
+        }
     }
 }
