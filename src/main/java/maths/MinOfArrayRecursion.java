@@ -9,8 +9,9 @@ public class MinOfArrayRecursion {
 
         int left = 0;
         int right = array.length - 1;
-        System.out.println("min = " + min(array, left, right)); /* output: 1*/
 
+        assert min(array, left, right) == 1;
+        assert min(array, array.length) == 1;
     }
 
     /**
@@ -36,5 +37,21 @@ public class MinOfArrayRecursion {
         int rightMin = min(array, mid + 1, right);
 
         return Math.min(leftMin, rightMin);
+    }
+
+    /**
+     * Find min value in array
+     *
+     * @param array contains elements
+     * @param len   the length of array
+     * @return min value in {@code array}
+     */
+    public static int min(int[] array, int len) {
+        if (len == 1) {
+            return array[0];
+        } else {
+            int temp = min(array, len - 1);
+            return Math.min(array[len - 1], temp);
+        }
     }
 }
