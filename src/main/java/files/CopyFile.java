@@ -36,6 +36,7 @@ public class CopyFile {
         } finally {
             try {
                 assert writer != null;
+                assert reader != null;
                 writer.close();
                 reader.close();
             } catch (IOException e) {
