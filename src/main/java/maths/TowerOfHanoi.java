@@ -18,11 +18,10 @@ public class TowerOfHanoi {
     }
 
     public static void hanoi(int n, char A, char B, char C) {
-        if (n == 0) {
-            return;
+        if (n != 0) {
+            hanoi(n - 1, A, C, B);
+            System.out.format("Move %c to %c\n", A, C);
+            hanoi(n - 1, B, A, C);
         }
-        hanoi(n - 1, A, C, B);
-        System.out.format("Move %c to %c\n", A, C);
-        hanoi(n - 1, B, A, C);
     }
 }
