@@ -126,6 +126,19 @@ public class ArrayList {
     }
 
     /**
+     * Update element at specified index
+     *
+     * @param index the index of element to be updated
+     * @param elem  new value
+     * @return <tt>true</tt> if update successfully
+     */
+    public boolean update(int index, int elem) {
+        checkBoundForUpdate(index);
+        items[index] = elem;
+        return true;
+    }
+
+    /**
      * Check bounds for add operation
      *
      * @param index to be checked for adding
@@ -145,6 +158,15 @@ public class ArrayList {
         if (index > size - 1 || index < 0) {
             errorMessage(index);
         }
+    }
+
+    /**
+     * Check bounds for update
+     *
+     * @param index to be checked for removing
+     */
+    private void checkBoundForUpdate(int index) {
+        checkBoundForRemove(index);
     }
 
     private void errorMessage(int index) {
@@ -174,6 +196,8 @@ public class ArrayList {
         assert list.remove() == 5;
         assert list.remove(1) == 2;
         assert list.toString().equals("[1, 3, 4]");
+        list.update(1, 33);
+        assert list.toString().equals("[1, 33, 4]");
 
         list.clear();
         assert list.toString().equals("[]");
