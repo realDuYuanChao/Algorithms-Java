@@ -68,6 +68,19 @@ public class Stack {
         return values[top--];
     }
 
+    /**
+     * Get element at top of stack without removing
+     *
+     * @return element at top of stack
+     * @throws EmptyStackException if stack is empty
+     */
+    public int peek() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return values[top];
+    }
+
     /* Driver */
     public static void main(String[] args) {
         Stack stack = new Stack();
@@ -75,7 +88,7 @@ public class Stack {
         stack.push(2); /* 1 2 */
         stack.push(3); /* 1 2 3 */
         stack.push(4); /* 1 2 3 4 */
-
+        assert stack.peek() == 4;
         while (!stack.isEmpty()) {
             System.out.println(stack.pop() + " ");
         }

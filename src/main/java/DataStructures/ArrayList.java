@@ -1,11 +1,9 @@
 package DataStructures;
 
-import java.util.Arrays;
-
 public class ArrayList {
 
     /* the array contains elements */
-    int[] items;
+    private int[] items;
 
     /* default capacity */
     private static final int DEFAULT_CAPACITY = 10;
