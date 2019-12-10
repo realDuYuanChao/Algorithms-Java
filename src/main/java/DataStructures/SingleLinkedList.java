@@ -143,6 +143,21 @@ public class SingleLinkedList {
     }
 
     /**
+     * Update specified position node
+     *
+     * @param position the position
+     * @param e        new value
+     */
+    public void update(int position, int e) {
+        checkBounds(position, 0, size - 1);
+        Node cur = head;
+        for (int i = 0; i <= position; ++i) {
+            cur = cur.next;
+        }
+        cur.data = e; /* update element value */
+    }
+
+    /**
      * Merge two sorted SingleLinkedList
      *
      * @param listA the first sorted list
@@ -242,18 +257,18 @@ public class SingleLinkedList {
         list.insert(1); /* 0 1 */
         list.insert(2); /* 0 1 2 */
         list.insertFront(-1); /* -1 0 1 2 */
-        System.out.println(list);
-
-        System.out.println("----------------");
-
+        assert list.toString().equals("-1->0->1->2");
         list.deleteFront(); /* 0 1 2 */
+        assert list.toString().equals("0->1->2");
         list.delete(); /* 0 1 */
+        assert list.toString().equals("0->1");
         list.delete(0); /* 1 */
-        System.out.println(list);
+        assert list.toString().equals("1");
+        list.update(0, 666);
+        assert list.toString().equals("666");
 
         list.clear();
         assert list.isEmpty();
-        System.out.println(list);
 
         /* Test MergeTwoSortedLinkedList */
         SingleLinkedList listA = new SingleLinkedList();
@@ -264,9 +279,9 @@ public class SingleLinkedList {
             listB.insertSorted(i - 1);
         }
 
-        System.out.println(listA); /* 2->4->6->8->10 */
-        System.out.println(listB); /* 1->3->5->7->9 */
-        System.out.println(SingleLinkedList.merge(listA, listB));
+        assert listA.toString().equals("2->4->6->8->10");
+        assert listB.toString().equals("1->3->5->7->9");
+        assert merge(listA, listB).toString().equals("1->2->3->4->5->6->7->8->9->10");
 
         /* Test reverse LinkedList */
         SingleLinkedList singleLinkedList = new SingleLinkedList();
