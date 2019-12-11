@@ -93,6 +93,17 @@ public class CircleSingleLinkedList {
         size--;
     }
 
+    public int get(int index) {
+        if (index > size - 1 || index < 0) {
+            throw new IndexOutOfBoundsException("" + index);
+        }
+        Node cur = head;
+        for (int i = 0; i <= index; i++) {
+            cur = cur.next;
+        }
+        return cur.data;
+    }
+
     /**
      * get size of list
      *
