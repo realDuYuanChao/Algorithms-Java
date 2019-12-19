@@ -34,12 +34,12 @@ public class Queue {
     /**
      * init queue with specified size
      *
-     * @param size queue size
+     * @param capacity queue size
      */
-    public Queue(int size) {
-        values = new int[size + 1];
+    public Queue(int capacity) {
+        values = new int[capacity + 1];
         front = rear = 0;
-        maxSize = size + 1;
+        maxSize = capacity + 1;
         this.size = 0;
     }
 
@@ -49,7 +49,7 @@ public class Queue {
      * @return <tt>true</tt> if queue is full, otherwise <tt>true</tt>
      */
     public boolean isFull() {
-        return (rear + 1) % maxSize == front;
+        return size == maxSize - 1;
     }
 
     /**
@@ -58,7 +58,7 @@ public class Queue {
      * @return <tt>true</tt> if queue is empty, otherwise <tt>false</tt>>
      */
     public boolean isEmpty() {
-        return front == rear;
+        return size == 0;
     }
 
     /**
@@ -144,19 +144,17 @@ public class Queue {
     public static void main(String[] args) {
         Queue queue = new Queue(5);
 
-        System.out.println(queue.isEmpty()); /* output: true */
-        queue.enqueue(1); /* 1 */
-        queue.enqueue(2); /* 1 2 */
-        queue.enqueue(3); /* 1 2 3 */
-        queue.enqueue(4); /* 1 2 3 4 */
-        System.out.println(queue.isFull()); /* output: false */
-        queue.enqueue(5); /* 1 2 3 4 5 */
-        System.out.println(queue.isFull()); /* output: true */
-
-        System.out.println(queue); /* output: [1, 2, 3, 4, 5] */
-
-        while (!queue.isEmpty()) {
-            System.out.print(queue.dequeue() + " "); /* output: 1 2 3 4 5 */
+        for (int i = 1; i <= 5; i++) {
+            queue.enqueue(i);
+            System.out.println(queue);
         }
+        assert queue.toString().equals("[1, 2, 3, 4, 5]");
+        assert queue.peekFront() == 1;
+        assert queue.peekRear() == 5;
+
+        for (int i = 1; i <= 5; i++) {
+            assert queue.dequeue() == i;
+        }
+        assert queue.isEmpty();
     }
 }
