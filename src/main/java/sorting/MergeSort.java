@@ -14,29 +14,27 @@ public class MergeSort {
 
         int length = high - low + 1;
         int[] temp = new int[length];
-        int pa = low;
-        int pb = mid + 1;
-        int pc = 0;
+        int i = low;
+        int j = mid + 1;
+        int k = 0;
 
-        while (pa <= mid && pb <= high) {
-            if (array[pa] <= array[pb]) {
-                temp[pc++] = array[pa++];
+        while (i <= mid && j <= high) {
+            if (array[i] <= array[j]) {
+                temp[k++] = array[i++];
             } else {
-                temp[pc++] = array[pb++];
+                temp[k++] = array[j++];
             }
         }
 
-        while (pa <= mid) {
-            temp[pc++] = array[pa++];
+        while (i <= mid) {
+            temp[k++] = array[i++];
         }
 
-        while (pb <= high) {
-            temp[pc++] = array[pb++];
+        while (j <= high) {
+            temp[k++] = array[j++];
         }
 
-        for (int i = 0; i < length; ++i) {
-            array[low + i] = temp[i];
-        }
+        System.arraycopy(temp, 0, array, low, length);
     }
 
     /**
@@ -56,7 +54,7 @@ public class MergeSort {
         merge(array, low, mid, high);
     }
 
-
+    /* Driver Code */
     public static void main(String[] args) {
         int[] array = {1, 3, 5, 7, 9, 2, 4, 6, 8, 10};
         mergeSort(array, 0, array.length - 1);
