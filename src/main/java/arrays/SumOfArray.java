@@ -5,6 +5,7 @@ public class SumOfArray {
         int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         assert sum(nums) == 55;
         assert sum(nums, 0, nums.length - 1) == 55;
+        assert sum(nums, nums.length) == 55;
     }
 
     /**
@@ -22,7 +23,7 @@ public class SumOfArray {
     }
 
     /**
-     * Get sum of array using
+     * Get sum of array using Divide-and-conquer algorithm
      *
      * @param nums contains numbers
      * @param low  the low index
@@ -35,5 +36,20 @@ public class SumOfArray {
         }
         int mid = (low + high) >>> 1;
         return sum(nums, low, mid) + sum(nums, mid + 1, high);
+    }
+
+    /**
+     * Get sum of array using recursion
+     *
+     * @param nums contains numbers
+     * @param len  the length of numbers
+     * @return sum of {@code nums}
+     */
+    public static int sum(int[] nums, int len) {
+        if (len == 1) {
+            return nums[0];
+        } else {
+            return nums[len - 1] + sum(nums, len - 1);
+        }
     }
 }
