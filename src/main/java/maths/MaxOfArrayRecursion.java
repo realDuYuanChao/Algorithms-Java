@@ -1,15 +1,10 @@
 package maths;
 
-/**
- * @author https://github.com/shellhub
- */
 public class MaxOfArrayRecursion {
     public static void main(String[] args) {
         int[] array = {1, 3, 5, 7, 9, 2, 4, 6, 8, 10};
 
-        int left = 0;
-        int right = array.length - 1;
-        assert max(array, left, right) == 10;
+        assert max(array, 0, array.length - 1) == 10;
         assert max(array, array.length) == 10;
 
     }
@@ -47,11 +42,6 @@ public class MaxOfArrayRecursion {
      * @return max value in {@code array}
      */
     public static int max(int[] array, int len) {
-        if (len == 1) {
-            return array[0];
-        } else {
-            int temp = max(array, len - 1);
-            return Math.max(array[len - 1], temp);
-        }
+        return len == 1 ? array[0] : Math.max(max(array, len - 1), array[len - 1]);
     }
 }
